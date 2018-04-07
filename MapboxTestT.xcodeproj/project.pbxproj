@@ -17,6 +17,7 @@
 		06AB491D2078C6B000C799D5 /* MapboxTestTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AB491C2078C6B000C799D5 /* MapboxTestTUITests.m */; };
 		06AB492B2078C6FE00C799D5 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06AB492A2078C6FE00C799D5 /* Mapbox.framework */; };
 		06AB492C2078C6FE00C799D5 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06AB492A2078C6FE00C799D5 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06AB49302078D25400C799D5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 06AB492F2078D25300C799D5 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		06AB491C2078C6B000C799D5 /* MapboxTestTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapboxTestTUITests.m; sourceTree = "<group>"; };
 		06AB491E2078C6B000C799D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06AB492A2078C6FE00C799D5 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		06AB492F2078D25300C799D5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		06AB48EC2078C6AB00C799D5 = {
 			isa = PBXGroup;
 			children = (
+				06AB492F2078D25300C799D5 /* README.md */,
 				06AB492A2078C6FE00C799D5 /* Mapbox.framework */,
 				06AB48F72078C6AB00C799D5 /* MapboxTestT */,
 				06AB49102078C6B000C799D5 /* MapboxTestTTests */,
@@ -258,6 +261,7 @@
 			files = (
 				06AB49052078C6B000C799D5 /* LaunchScreen.storyboard in Resources */,
 				06AB49022078C6B000C799D5 /* Assets.xcassets in Resources */,
+				06AB49302078D25400C799D5 /* README.md in Resources */,
 				06AB49002078C6AB00C799D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
