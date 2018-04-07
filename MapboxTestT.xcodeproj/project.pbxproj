@@ -15,6 +15,8 @@
 		06AB49082078C6B000C799D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AB49072078C6B000C799D5 /* main.m */; };
 		06AB49122078C6B000C799D5 /* MapboxTestTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AB49112078C6B000C799D5 /* MapboxTestTTests.m */; };
 		06AB491D2078C6B000C799D5 /* MapboxTestTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AB491C2078C6B000C799D5 /* MapboxTestTUITests.m */; };
+		06AB492B2078C6FE00C799D5 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06AB492A2078C6FE00C799D5 /* Mapbox.framework */; };
+		06AB492C2078C6FE00C799D5 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06AB492A2078C6FE00C799D5 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		06AB492D2078C6FE00C799D5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				06AB492C2078C6FE00C799D5 /* Mapbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		06AB48F52078C6AB00C799D5 /* MapboxTestT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapboxTestT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06AB48F82078C6AB00C799D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +67,7 @@
 		06AB49182078C6B000C799D5 /* MapboxTestTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapboxTestTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06AB491C2078C6B000C799D5 /* MapboxTestTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapboxTestTUITests.m; sourceTree = "<group>"; };
 		06AB491E2078C6B000C799D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06AB492A2078C6FE00C799D5 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06AB492B2078C6FE00C799D5 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +99,7 @@
 		06AB48EC2078C6AB00C799D5 = {
 			isa = PBXGroup;
 			children = (
+				06AB492A2078C6FE00C799D5 /* Mapbox.framework */,
 				06AB48F72078C6AB00C799D5 /* MapboxTestT */,
 				06AB49102078C6B000C799D5 /* MapboxTestTTests */,
 				06AB491B2078C6B000C799D5 /* MapboxTestTUITests */,
@@ -142,6 +161,8 @@
 				06AB48F12078C6AB00C799D5 /* Sources */,
 				06AB48F22078C6AB00C799D5 /* Frameworks */,
 				06AB48F32078C6AB00C799D5 /* Resources */,
+				06AB492D2078C6FE00C799D5 /* Embed Frameworks */,
+				06AB492E2078C72F00C799D5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,6 +277,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06AB492E2078C72F00C799D5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		06AB48F12078C6AB00C799D5 /* Sources */ = {
@@ -434,12 +471,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MapboxTestT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ForwardGame.MapboxTestT;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapboxtest.mapboxtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,12 +493,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MapboxTestT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ForwardGame.MapboxTestT;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapboxtest.mapboxtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

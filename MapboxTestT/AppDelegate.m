@@ -2,9 +2,7 @@
 //  AppDelegate.m
 //  MapboxTestT
 //
-//  Created by Tim Friedland on 07.04.18.
-//  Copyright © 2018 Tim Friedland. All rights reserved.
-//
+
 
 #import "AppDelegate.h"
 
@@ -17,6 +15,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+
+    
     return YES;
 }
 
