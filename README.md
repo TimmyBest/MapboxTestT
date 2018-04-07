@@ -9,7 +9,7 @@ Hello and thanks for contributing! To help us diagnose your problem quickly, ple
 **Platform:** iOS
 **Mapbox SDK version:** 3.7.6
 
-
+### This is a Mapbox Issue Reproducing Project
 
 ### Steps to trigger behavior
 
